@@ -4,7 +4,7 @@
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-13A13A?style=for-the-badge&logo=Swagger&logoColor=white)
-![H2](https://img.shields.io/badge/H2-36F?style=for-the-badge&logo=square&logoColor=white)
+![H2](https://img.shields.io/badge/H2-36F?style=for-the-badge&logo=circle&logoColor=white)
 
 ## Table of Contents
 
@@ -57,6 +57,19 @@ open http://localhost:8080/swagger-ui/index.html
 }
 ```
 
+## Screenshots of use
+
+### Start screen
+![0.png](screenshots%2F0.png)
+### Translate endpoint test
+![1_0.png](screenshots%2F1_0.png)
+![1_1.png](screenshots%2F1_1.png)
+### Translate endpoint result
+![1_2.png](screenshots%2F1_2.png)
+### Data endpoint test
+![2_0.png](screenshots%2F2_0.png)
+### Data endpoint result
+![2_1.png](screenshots%2F2_1.png)
 ## Versions:
 
 - Application version: 1.0.0
