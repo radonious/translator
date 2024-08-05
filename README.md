@@ -45,7 +45,7 @@ Enter your API key into service.apiKey
 ```bash
 cd Translator
 mvn clean spring-boot:run 
-open http://localhost:8080/swagger-ui/index.html
+open http://localhost:8085/swagger-ui/index.html
 ```
 
 ## Request body example

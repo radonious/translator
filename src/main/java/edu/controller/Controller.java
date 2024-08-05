@@ -21,10 +21,10 @@ public class Controller {
     public String translate(
             @Valid @RequestBody RequestDTO requestDTO,
             HttpServletRequest request) {
-        String result = translateService.translate(requestDTO);
+        String result = translateService.translate(requestDTO).trim();
         String ipAddress = request.getHeader("X-FORWARDED-FOR");
         if (ipAddress == null || ipAddress.isEmpty()) ipAddress = request.getRemoteAddr();
-        logService.saveLog(new Log(ipAddress,requestDTO.getFrom(), requestDTO.getTo(), requestDTO.getText()));
+        logService.saveLog(new Log(ipAddress,requestDTO.getFrom(), requestDTO.getTo(), requestDTO.getText(), result));
         return result;
     }
 

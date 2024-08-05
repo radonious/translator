@@ -2,8 +2,6 @@ package edu.repository;
 
 import edu.model.Log;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.PropertySource;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
@@ -24,11 +22,12 @@ public class LogRepository {
         Connection conn = DriverManager.getConnection (dbUrl, dbUser,dbPass);
         Statement st = conn.createStatement();
         st.executeUpdate(String.format(
-                "INSERT INTO translations VALUES('%s', '%s', '%s', '%s');",
+                "INSERT INTO translations VALUES('%s', '%s', '%s', '%s', '%s');",
                 log.getIp(),
                 log.getFromLang(),
                 log.getToLang(),
-                log.getText()
+                log.getInput(),
+                log.getOutput()
         ));
         st.close();
         conn.close();
@@ -44,8 +43,9 @@ public class LogRepository {
             String ip = rs.getString("ip");
             String fromLang = rs.getString("fromLang");
             String toLang = rs.getString("toLang");
-            String text = rs.getString("text");
-            result.add(new Log(ip, fromLang, toLang, text));
+            String input = rs.getString("input");
+            String output = rs.getString("output");
+            result.add(new Log(ip, fromLang, toLang, input, output));
         }
         return result;
     }

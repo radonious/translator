@@ -14,7 +14,8 @@ public class Log {
     private String ip;
     private String fromLang;
     private String toLang;
-    private String text;
+    private String input;
+    private String output;
 
     @Override
     public String toString() {
@@ -22,7 +23,8 @@ public class Log {
                 "ip='" + ip + '\'' +
                 ", fromLang='" + fromLang + '\'' +
                 ", toLang='" + toLang + '\'' +
-                ", text='" + text + '\'' +
+                ", input='" + input + '\'' +
+                ", output='" + output + '\'' +
                 '}';
     }
 }
